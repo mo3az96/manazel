@@ -132,14 +132,11 @@ footer {
     &:focus {
         color: $secgold;
         transform: translateX(-8px);
-    }
-}
 
-#{$ltr} .nav-foot-link {
+        #{$ltr} & {
+            transform: translateX(8px);
+        }
 
-    &:hover,
-    &:focus {
-        transform: translateX(8px);
     }
 }
 
@@ -152,6 +149,11 @@ footer {
 
     &:nth-of-type(n+5) {
         margin-right: 60px;
+
+        #{$ltr} & {
+            margin-left: 60px;
+            margin-right: 0;
+        }
     }
 }
 
@@ -189,6 +191,11 @@ footer {
     color: #fff;
     @include transition(all 0.3s ease-in-out);
 
+    #{$ltr} & {
+        margin-left: 0;
+        margin-right: 9px;
+    }
+
     &:hover {
         background-color: $secgold;
         color: #fff;
@@ -196,6 +203,11 @@ footer {
 
     &:last-of-type {
         margin-left: 0;
+
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 }
 

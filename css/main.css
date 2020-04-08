@@ -57,6 +57,7 @@ body {
   position: relative;
   font-family: tajwal;
   overflow: hidden;
+  text-transform: capitalize;
 }
 body::-webkit-scrollbar {
   background-color: #fff;
@@ -283,11 +284,11 @@ html[dir=ltr] .newsletter-input::placeholder {
   font-family: "Linearicons-Free";
 }
 
-html[dir=ltr] .newsletter-button {
+html[dir=ltr] .newsletter-btn {
   left: auto;
   right: 25px;
 }
-html[dir=ltr] .newsletter-button:after {
+html[dir=ltr] .newsletter-btn:after {
   content: "";
 }
 
@@ -582,12 +583,12 @@ html[dir=ltr] .country .country-dropdown:before {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.user-anchor ltr .user-anchor {
+html[dir=ltr] .user-anchor {
   margin-left: 0;
   margin-right: 28px;
 }
 @media (max-width: 992px) {
-  .user-anchor ltr .user-anchor {
+  html[dir=ltr] .user-anchor {
     margin-right: 20px;
   }
 }
@@ -599,12 +600,12 @@ html[dir=ltr] .country .country-dropdown:before {
     margin-left: 0;
   }
 }
-.user-anchor:last-of-type ltr .user-anchor:last-of-type {
+html[dir=ltr] .user-anchor:last-of-type {
   margin-left: 0;
   margin-right: 0;
 }
 @media (max-width: 992px) {
-  .user-anchor:last-of-type ltr .user-anchor:last-of-type {
+  html[dir=ltr] .user-anchor:last-of-type {
     margin-left: 0;
     margin-right: 0;
   }
@@ -846,6 +847,10 @@ html[dir=ltr] .product .mo-add-to-cart {
   align-items: flex-end;
   flex-direction: column;
 }
+html[dir=ltr] .fixed-icons {
+  right: 0;
+  left: auto;
+}
 .fixed-icons .fixed-link {
   width: 50px;
   height: 50px;
@@ -1034,8 +1039,7 @@ footer {
   color: #ab9366;
   transform: translateX(-8px);
 }
-
-html[dir=ltr] .nav-foot-link:hover, html[dir=ltr] .nav-foot-link:focus {
+html[dir=ltr] .foot-link:hover, html[dir=ltr] .foot-link:focus {
   transform: translateX(8px);
 }
 
@@ -1047,6 +1051,10 @@ html[dir=ltr] .nav-foot-link:hover, html[dir=ltr] .nav-foot-link:focus {
 }
 .foot-nav-li:nth-of-type(n+5) {
   margin-right: 60px;
+}
+html[dir=ltr] .foot-nav-li:nth-of-type(n+5) {
+  margin-left: 60px;
+  margin-right: 0;
 }
 
 .newsletter-info {
@@ -1088,12 +1096,20 @@ html[dir=ltr] .nav-foot-link:hover, html[dir=ltr] .nav-foot-link:focus {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+html[dir=ltr] .social-link {
+  margin-left: 0;
+  margin-right: 9px;
+}
 .social-link:hover {
   background-color: #ab9366;
   color: #fff;
 }
 .social-link:last-of-type {
   margin-left: 0;
+}
+html[dir=ltr] .social-link:last-of-type {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .copytight {
