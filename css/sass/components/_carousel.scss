@@ -1,0 +1,67 @@
+.main-slider {
+    position: relative;
+
+    .owl-nav {
+        width: 0;
+        height: 0;
+
+        @include xs {
+            display: none;
+        }
+
+        button[class^=owl-] {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: none;
+            color: rgba(#000, 0.5);
+            font-size: 30px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.owl-next {
+                left: 60px;
+            }
+
+            &.owl-prev {
+                right: 60px;
+            }
+
+            &:hover {
+                color: #923553;
+            }
+        }
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include sm {
+            bottom: 10px;
+        }
+
+        .owl-dot {
+            background: rgba(#000, 0.55);
+            outline: none;
+            border: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 3px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: #923553;
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: #923553;
+            }
+        }
+    }
+}

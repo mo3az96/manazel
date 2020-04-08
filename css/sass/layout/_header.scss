@@ -1,0 +1,230 @@
+.top-bar-cont {
+    background-image: -moz-linear-gradient(0deg, rgb(112, 29, 52) 0%, rgb(149, 55, 86) 100%);
+    background-image: -webkit-linear-gradient(0deg, rgb(112, 29, 52) 0%, rgb(149, 55, 86) 100%);
+    background-image: -ms-linear-gradient(0deg, rgb(112, 29, 52) 0%, rgb(149, 55, 86) 100%);
+}
+
+.top-bar {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include xs {
+        height: 30px;
+    }
+}
+
+.country {
+    position: relative;
+
+    .country-anchor {
+        font-size: 14px;
+        color: $grey;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @include transition(all 0.3s ease-in-out);
+
+        img {
+            margin-left: 10px;
+
+            #{$ltr} & {
+                margin-right: 10px;
+                margin-left: 0;
+            }
+        }
+
+        &:after {
+            content: "\e874";
+            font-family: 'Linearicons-Free';
+            font-size: 8px;
+            margin-right: 3px;
+
+            #{$ltr} & {
+                margin-right: 0;
+                margin-left: 3px;
+            }
+        }
+
+        &:hover {
+            color: #fff;
+
+            &:after {
+                color: #fff;
+            }
+        }
+
+    }
+
+    .country-dropdown {
+        position: absolute;
+        width: auto;
+        height: auto;
+        right: -22px;
+        top: 125%;
+        z-index: 10;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.13);
+        padding: 10px 10px 0;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: none;
+        @include transition(all 0.3s ease-in-out);
+
+        #{$ltr} & {
+            right: -19px;
+        }
+
+        &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-width: 6px;
+            border-color: transparent transparent #ffffff;
+            border-style: solid;
+            top: -12px;
+            position: absolute;
+            right: 26px;
+
+            #{$ltr} & {
+                right: auto;
+                left: 26px;
+            }
+        }
+
+        .country-anchor {
+            width: 100%;
+            border-bottom: 1px solid #ededed;
+            padding-bottom: 8px;
+            margin-bottom: 6px;
+            justify-content: center;
+            color: $text;
+
+            &:hover {
+                color: $gold;
+            }
+
+            &:last-of-type {
+                border: none;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+
+
+    }
+
+    &:hover {
+        .country-dropdown {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.lang {
+    font-size: 14px;
+    color: $grey;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    @include xs {
+        padding: 10px 0;
+        flex-direction: column;
+    }
+}
+
+.logo {
+    display: block;
+    width: 229px;
+
+    @include xs {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+}
+
+.mo-user-nav {
+    display: flex;
+    align-items: center;
+    width: 229px;
+    justify-content: flex-end;
+
+    @include sm {
+        width: auto;
+    }
+}
+
+.user-anchor {
+    font-size: 20px;
+    color: $text;
+    margin-left: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition(all 0.3s ease-in-out);
+
+    #{&ltr} & {
+        margin-left: 0;
+        margin-right: 28px;
+
+        @include sm {
+            margin-right: 20px;
+        }
+    }
+
+    &:last-of-type {
+        margin-left: 0;
+
+        @include sm {
+            margin-left: 0;
+        }
+
+        #{&ltr} & {
+            margin-left: 0;
+            margin-right: 0;
+
+            @include sm {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+    &.mo-menu-icon {
+        display: none;
+    }
+
+    @include sm {
+        margin-left: 20px;
+
+        &.mo-menu-icon {
+            display: flex;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        color: $red;
+    }
+}
