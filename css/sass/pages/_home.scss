@@ -222,6 +222,10 @@
     align-items: flex-end;
     flex-direction: column;
 
+    @include xs {
+        display: none;
+    }
+
     #{$ltr} & {
         right: 0;
         left: auto;

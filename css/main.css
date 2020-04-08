@@ -846,6 +846,11 @@ html[dir=ltr] .product .mo-add-to-cart {
   align-items: flex-end;
   flex-direction: column;
 }
+@media (max-width: 767px) {
+  .fixed-icons {
+    display: none;
+  }
+}
 html[dir=ltr] .fixed-icons {
   right: 0;
   left: auto;
