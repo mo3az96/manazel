@@ -462,8 +462,9 @@ html[dir=ltr] .country .country-anchor:after {
   position: absolute;
   width: auto;
   height: auto;
-  right: -22px;
-  top: 125%;
+  right: 50%;
+  transform: translateX(50%) translateY(10px);
+  top: 100%;
   z-index: 10;
   background-color: #fff;
   border-radius: 5px;
@@ -482,9 +483,6 @@ html[dir=ltr] .country .country-anchor:after {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-html[dir=ltr] .country .country-dropdown {
-  right: -19px;
-}
 .country .country-dropdown:before {
   content: "";
   width: 0;
@@ -495,13 +493,11 @@ html[dir=ltr] .country .country-dropdown {
   border-style: solid;
   top: -12px;
   position: absolute;
-  right: 26px;
-}
-html[dir=ltr] .country .country-dropdown:before {
-  right: auto;
-  left: 26px;
+  right: 50%;
+  transform: translateX(50%);
 }
 .country .country-dropdown .country-anchor {
+  white-space: nowrap;
   width: 100%;
   border-bottom: 1px solid #ededed;
   padding-bottom: 8px;
@@ -521,6 +517,7 @@ html[dir=ltr] .country .country-dropdown:before {
 .country:hover .country-dropdown {
   visibility: visible;
   opacity: 1;
+  transform: translateX(50%) translateY(3px);
 }
 
 .lang {
