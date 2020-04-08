@@ -33,7 +33,10 @@
     @include xs {
         flex-direction: column;
         justify-content: center;
+        margin: auto;
         margin-top: 20px;
+        width: 75%;
+
     }
 
     .product-img {
@@ -46,7 +49,7 @@
         overflow: hidden;
 
         @include xs {
-            width: 50%;
+            width: 75%;
         }
 
         &::before {
