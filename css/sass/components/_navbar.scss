@@ -5,6 +5,14 @@
 
 .nav-li {
     margin: 0 10px;
+
+    &.xs-link {
+        display: none;
+
+        @include sm {
+            display: block;
+        }
+    }
 }
 
 .nav-anchor {

@@ -149,7 +149,6 @@
 
     @include xs {
         padding: 10px 0;
-        flex-direction: column;
     }
 }
 
@@ -159,7 +158,6 @@
 
     @include xs {
         width: 200px;
-        margin-bottom: 10px;
     }
 }
 
@@ -225,5 +223,11 @@
     &:hover,
     &:focus {
         color: $red;
+    }
+
+    &.mo-log-icon {
+        @include sm {
+            display: none;
+        }
     }
 }
